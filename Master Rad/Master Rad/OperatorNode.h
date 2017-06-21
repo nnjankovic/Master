@@ -34,17 +34,17 @@ public:
 	{}
 
 	// IBoolTreeNode implementations
-	NodeType getNodeType() { return OPERATOR; }
+	virtual NodeType getNodeType() = 0;
 	std::shared_ptr<IBoolTreeNode> getLeftChildNode() { return leftChild; }
 	std::shared_ptr<IBoolTreeNode> getRightChildNode() { return rightChild; }
 	virtual std::string toString() = 0;
 
 	/*! Sets a left child node.
 	*/
-	void setLeftChildNode(std::shared_ptr<IBoolTreeNode> node) { leftChild = node; }
+	void setLeftChildNode(std::shared_ptr<IBoolTreeNode> node);
 	/*! Sets a right child node.
 	*/
-	void setRightChildNode(std::shared_ptr<IBoolTreeNode> node) { rightChild = node; }
+	void setRightChildNode(std::shared_ptr<IBoolTreeNode> node);
 
 	/*! This function is called to determine wheter this operator in under negation.
 	*/

@@ -13,10 +13,12 @@
 #define INTF struct
 
 /*! This enum value is 
-	used to determine wheter node is operator or operand
+	used to determine the type of a node.
+	Node can be AND_OPERATOR, OR_OPERATOR or OPERAND.
 */
 enum NodeType {
-	OPERATOR,
+	AND_OPERATOR,
+	OR_OPERATOR,
 	OPERAND
 };
 

@@ -139,9 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ANDNode.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OperatorNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ANDNode.h" />
     <ClInclude Include="IBoolTreeNode.h" />
     <ClInclude Include="OperatorNode.h" />
   </ItemGroup>
