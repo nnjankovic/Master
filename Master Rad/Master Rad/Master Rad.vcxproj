@@ -142,11 +142,13 @@
     <ClCompile Include="ANDNode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OperatorNode.cpp" />
+    <ClCompile Include="ORNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ANDNode.h" />
     <ClInclude Include="IBoolTreeNode.h" />
     <ClInclude Include="OperatorNode.h" />
+    <ClInclude Include="ORNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

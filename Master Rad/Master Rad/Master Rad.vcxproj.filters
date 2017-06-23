@@ -24,6 +24,9 @@
     <ClCompile Include="OperatorNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ORNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IBoolTreeNode.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ANDNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ORNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
