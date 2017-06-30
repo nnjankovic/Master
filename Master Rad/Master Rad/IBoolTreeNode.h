@@ -41,5 +41,13 @@ public:
 	/*! Returns the string representation of node.
 	*/
 	virtual std::string toString() = 0;
+
+	/*! Return true if node is under negation, returns false otherwise.
+	*/
+	virtual bool isNegated() = 0;
+	
+	/*! Sets the negation value of a node.
+	*/
+	virtual void setNegated(bool value) = 0;
 };
 #endif

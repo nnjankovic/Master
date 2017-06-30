@@ -10,7 +10,7 @@ std::string ORNode::toString() {
 	assert(getLeftChildNode() != nullptr);
 	assert(getRightChildNode() != nullptr);
 
-	if (isOperationNegation())
+	if (isNegated())
 		return "{" + getLeftChildNode()->toString() + "+" + getRightChildNode()->toString() + "}";
 
 	return getLeftChildNode()->toString() + "+" + getRightChildNode()->toString();

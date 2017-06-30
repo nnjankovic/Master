@@ -27,7 +27,7 @@ std::string ANDNode::toString() {
 	if (getRightChildNode()->getNodeType() == NodeType::OR_OPERATOR)
 		result += ")";
 
-	if (isOperationNegation())
+	if (isNegated())
 		result = "{" + result + "}";
 
 	return result;

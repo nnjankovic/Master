@@ -38,6 +38,8 @@ public:
 	std::shared_ptr<IBoolTreeNode> getLeftChildNode() { return leftChild; }
 	std::shared_ptr<IBoolTreeNode> getRightChildNode() { return rightChild; }
 	virtual std::string toString() = 0;
+	bool isNegated() { return isUnderNegation; }
+	void setNegated(bool value) { isUnderNegation = value;}
 
 	/*! Sets a left child node.
 	*/
@@ -45,13 +47,6 @@ public:
 	/*! Sets a right child node.
 	*/
 	void setRightChildNode(std::shared_ptr<IBoolTreeNode> node);
-
-	/*! This function is called to determine wheter this operator in under negation.
-	*/
-	bool isOperationNegation() { return isUnderNegation; }
-	/*! Sets if operator is under negation.
-	*/
-	void setIsUnderNegation(bool value) { isUnderNegation = value;}
 
 	/*! Virtual destructor.
 	*/
