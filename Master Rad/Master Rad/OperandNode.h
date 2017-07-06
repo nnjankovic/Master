@@ -7,8 +7,8 @@
 */
 
 #pragma once
-#ifndef OPERATORNODE_H_
-#define OPERATORNODE_H_
+#ifndef OPERANDNODE_H_
+#define OPERANDNODE_H_
 
 #include "IBoolTreeNode.h"
 
@@ -17,8 +17,8 @@ class OperandNode :
 	public IBoolTreeNode
 {
 public:
-	OperandNode(char c) : isUnderNegation(false),
-						  symbol(c)
+	OperandNode(char c, bool underNegation = false) : isUnderNegation(underNegation),
+												      symbol(c)
 	{};
 
 	// IBoolTreeNode implementations
@@ -35,4 +35,4 @@ private:
 	bool isUnderNegation;
 };
 
-#endif // !OPERATORNODE_H_
+#endif // !OPERANDNODE_H_

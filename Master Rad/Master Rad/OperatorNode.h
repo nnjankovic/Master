@@ -6,6 +6,7 @@
 */
 
 #pragma once
+
 #ifndef OPERATORNODE_H_
 #define OPERATORNODE_H_
 
@@ -28,9 +29,9 @@ class OperatorNode :
 public:
 	/*! Constructor initializes both child nodes to nullptr and isNegated flag to false. 
 	*/
-	OperatorNode() : leftChild(nullptr),
-					 rightChild(nullptr),
-					 isUnderNegation(false)
+	OperatorNode(bool underNegation = false) : leftChild(nullptr),
+											   rightChild(nullptr),
+											   isUnderNegation(underNegation)
 	{}
 
 	// IBoolTreeNode implementations

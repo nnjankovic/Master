@@ -15,13 +15,14 @@ class ANDNode :
 	public OperatorNode
 {
 public:
-	ANDNode();
+	ANDNode(bool underNegation = false) : OperatorNode(underNegation)
+	{};
 
 	//IBoolTreeNode implementation
 	NodeType getNodeType() { return AND_OPERATOR; }
 	std::string toString();
 
-	~ANDNode();
+	~ANDNode() {};
 };
 
 #endif // !ANDNODE_H_

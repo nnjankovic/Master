@@ -14,6 +14,7 @@
 #include "OperandNode.h"
 #include "ANDNode.h"
 #include "ORNode.h"
+#include "OperatorNode.h"
 
 class BoolTree
 {
@@ -22,7 +23,7 @@ public:
 	std::string printExpresion() { return rootNode->toString(); }
 	~BoolTree();
 private:
-	std::shared_ptr<IBoolTreeNode> rootNode;
+	std::shared_ptr<OperatorNode> rootNode;
 };
 
 #endif // !BOOLTREE_H_

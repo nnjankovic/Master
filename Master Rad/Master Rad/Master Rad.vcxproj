@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ANDNode.cpp" />
+    <ClCompile Include="BoolTree.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OperandNode.cpp" />
     <ClCompile Include="OperatorNode.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ANDNode.h" />
+    <ClInclude Include="BoolTree.h" />
     <ClInclude Include="IBoolTreeNode.h" />
     <ClInclude Include="OperandNode.h" />
     <ClInclude Include="OperatorNode.h" />

@@ -16,13 +16,14 @@ class ORNode :
 	public OperatorNode
 {
 public:
-	ORNode();
+	ORNode(bool underNegation = false) : OperatorNode(underNegation)
+	{};
 
 	//IBoolTreeNode implementation
 	NodeType getNodeType() { return OR_OPERATOR; }
 	std::string toString();
 
-	~ORNode();
+	~ORNode() {};
 };
 
 #endif // !ORNODE_H_
