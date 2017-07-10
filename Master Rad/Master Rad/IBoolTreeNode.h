@@ -10,6 +10,8 @@
 #include <memory>
 #include <string>
 
+#include "BoolTree.h"
+
 #define INTF struct
 
 /*! This enum value is 
@@ -49,5 +51,9 @@ public:
 	/*! Sets the negation value of a node.
 	*/
 	virtual void setNegated(bool value) = 0;
+
+	/*! Sets the pointer to the BoolTree structure to which the node belongs
+	*/
+	virtual void setBoolTree(std::shared_ptr<BoolTree> tree) = 0;
 };
 #endif

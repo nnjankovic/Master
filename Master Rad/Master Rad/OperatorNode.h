@@ -12,13 +12,6 @@
 
 #include "IBoolTreeNode.h"
 
-/*! This enum value determines wheter operator is AND(conjunction) or
-	OR(disjunction) operator.
-*/
-enum OperatorType {
-	AND, //*
-	OR	//+
-};
 
 /*! This abstract class implements IBoolTreeNode and
 	represents operator node in BoolTree data structure.
@@ -41,6 +34,7 @@ public:
 	virtual std::string toString() = 0;
 	bool isNegated() { return isUnderNegation; }
 	void setNegated(bool value) { isUnderNegation = value;}
+	void setBoolTree(std::shared_ptr<BoolTree> tree) { myBoolTree = tree; }
 
 	/*! Sets a left child node.
 	*/
@@ -58,6 +52,9 @@ private:
 
 	// This value is an indication wheter this operation is under negation.
 	bool isUnderNegation;
+
+	// A pointer to the BoolTree structure to which this OperatorNode belongs
+	std::shared_ptr<BoolTree> myBoolTree;
 };
 
 #endif // !OPERATORNODE_H_
