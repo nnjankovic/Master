@@ -3,3 +3,17 @@ Master Rad/.vs/Master Rad/v15/Browse.VC.opendb
 *.opendb
 *.db
 *.db
+Master Rad/.vs/Master Rad/v15/.suo
+Master Rad/.vs/Master Rad/v15/.suo
+*.db
+*.ipch
+*.vcxproj
+*.user
+*.tlog
+*.log
+*.lastbuildstate
+*.obj
+*.pdb
+*.idb
+*.exe
+*.ilk

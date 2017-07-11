@@ -20,11 +20,11 @@ void BoolTree::registerNode(std::shared_ptr<IBoolTreeNode> node) {
 			if (std::find(m_OperandsVector.begin(), m_OperandsVector.end(), node) == m_OperandsVector.end())
 				m_OperandsVector.push_back(std::static_pointer_cast<OperandNode>(node));
 			break;
-		case OR:
+		case OR_OPERATOR:
 			if (std::find(m_OrVector.begin(), m_OrVector.end(), node) == m_OrVector.end())
 				m_OrVector.push_back(std::static_pointer_cast<ORNode>(node));
 			break;
-		case AND:
+		case AND_OPERATOR:
 			if (std::find(m_AndVector.begin(), m_AndVector.end(), node) == m_AndVector.end())
 				m_AndVector.push_back(std::static_pointer_cast<ANDNode>(node));
 			break;
