@@ -17,3 +17,8 @@ Master Rad/.vs/Master Rad/v15/.suo
 *.idb
 *.exe
 *.ilk
+Master Rad/.vs/Master Rad/v14/.suo
+*.vcxproj
+*.obj
+*.log
+*.tlog

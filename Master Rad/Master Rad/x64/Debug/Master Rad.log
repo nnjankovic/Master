@@ -1,9 +1,11 @@
-﻿  main.cpp
-  OperatorNode.cpp
+﻿  BoolTree.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
   OperandNode.cpp
   ORNode.cpp
-  BoolTree.cpp
   ANDNode.cpp
-  Generating Code...
-  Master Rad.vcxproj -> E:\Master\Master Rad\x64\Debug\Master Rad.exe
-  Master Rad.vcxproj -> E:\Master\Master Rad\x64\Debug\Master Rad.pdb (Partial PDB)
+  Master Rad.vcxproj -> C:\Master rad SHONE\Master\Master Rad\x64\Debug\Master Rad.exe
+  Master Rad.vcxproj -> C:\Master rad SHONE\Master\Master Rad\x64\Debug\Master Rad.pdb (Partial PDB)

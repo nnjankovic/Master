@@ -14,10 +14,13 @@
 class ANDNode :
 	public OperatorNode
 {
-public:
+	friend class BoolTree;
+
+private:
 	ANDNode(bool underNegation = false) : OperatorNode(underNegation)
 	{};
 
+public:
 	//IBoolTreeNode implementation
 	NodeType getNodeType() { return AND_OPERATOR; }
 	std::string toString();

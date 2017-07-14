@@ -19,7 +19,7 @@
 class OperatorNode :
 	public IBoolTreeNode
 {
-public:
+protected:
 	/*! Constructor initializes both child nodes to nullptr and isNegated flag to false. 
 	*/
 	OperatorNode(bool underNegation = false) : leftChild(nullptr),
@@ -27,6 +27,7 @@ public:
 											   isUnderNegation(underNegation)
 	{}
 
+public:
 	// IBoolTreeNode implementations
 	virtual NodeType getNodeType() = 0;
 	std::shared_ptr<IBoolTreeNode> getLeftChildNode() { return leftChild; }
@@ -46,6 +47,7 @@ public:
 	*/
 	virtual ~OperatorNode() {}
 private:
+
 	std::shared_ptr<IBoolTreeNode> leftChild;
 	std::shared_ptr<IBoolTreeNode> rightChild;
 

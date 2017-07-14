@@ -15,10 +15,11 @@
 class ORNode :
 	public OperatorNode
 {
-public:
+	friend class BoolTree;
+private:
 	ORNode(bool underNegation = false) : OperatorNode(underNegation)
 	{};
-
+public:
 	//IBoolTreeNode implementation
 	NodeType getNodeType() { return OR_OPERATOR; }
 	std::string toString();

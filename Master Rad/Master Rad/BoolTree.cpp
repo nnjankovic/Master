@@ -13,26 +13,25 @@ BoolTree::BoolTree()
 	m_RootNode->setRightChildNode(std::shared_ptr<IBoolTreeNode>(new OperandNode('a')));
 }
 
-void BoolTree::registerNode(std::shared_ptr<IBoolTreeNode> node) {
-	switch (node->getNodeType())
-	{
-		case OPERAND:
-			if (std::find(m_OperandsVector.begin(), m_OperandsVector.end(), node) == m_OperandsVector.end())
-				m_OperandsVector.push_back(std::static_pointer_cast<OperandNode>(node));
-			break;
-		case OR_OPERATOR:
-			if (std::find(m_OrVector.begin(), m_OrVector.end(), node) == m_OrVector.end())
-				m_OrVector.push_back(std::static_pointer_cast<ORNode>(node));
-			break;
-		case AND_OPERATOR:
-			if (std::find(m_AndVector.begin(), m_AndVector.end(), node) == m_AndVector.end())
-				m_AndVector.push_back(std::static_pointer_cast<ANDNode>(node));
-			break;
-		default:
-			break;
-	}
+std::shared_ptr<ANDNode> BoolTree::createNewANDNode(bool underNegation)
+{
+	std::shared_ptr<ANDNode> newAndNode(new ANDNode(underNegation));
+	m_AndVector.push_back(newAndNode);
+	return newAndNode;
+}
 
+std::shared_ptr<ORNode> BoolTree::createNewORNode(bool underNegation)
+{
+	std::shared_ptr<ORNode> newOrNode(new ORNode(underNegation));
+	m_OrVector.push_back(newOrNode);
+	return newOrNode;
+}
 
+std::shared_ptr<OperandNode> BoolTree::createNewOperandNode(char c, bool underNegation)
+{
+	std::shared_ptr<OperandNode> newOperandNode(new OperandNode(c, underNegation));
+	m_OperandsVector.push_back(newOperandNode);
+	return newOperandNode;
 }
 
 

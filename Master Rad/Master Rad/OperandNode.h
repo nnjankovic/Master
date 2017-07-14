@@ -11,16 +11,17 @@
 #define OPERANDNODE_H_
 
 #include "IBoolTreeNode.h"
-//#include "BoolTree.h"
 
 class OperandNode : 
 	public IBoolTreeNode
 {
-public:
+	friend class BoolTree;
+private:
 	OperandNode(char c, bool underNegation = false) : isUnderNegation(underNegation),
 												      symbol(c)
 	{};
 
+public:
 	// IBoolTreeNode implementations
 	NodeType getNodeType() { return NodeType::OPERAND; }
 	std::shared_ptr<IBoolTreeNode> getLeftChildNode() { return nullptr; }
